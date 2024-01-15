@@ -1,2 +1,7 @@
-package Akyl;public class Main {
+package Akyl;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Akyl");
+    }
 }

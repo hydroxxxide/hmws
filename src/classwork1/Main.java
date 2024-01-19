@@ -51,6 +51,8 @@ public class Main {
                 String article = scanner2.nextLine();
                 List<Product> allProducts = catalog.getProducts();
                 allProducts.removeIf(p -> p.getArticle().equals(article));
+                System.out.println();
+                System.out.println();
                 catalog.setProducts(allProducts);
             }
 

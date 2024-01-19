@@ -24,6 +24,7 @@ public class Main {
             System.out.println("1. Создать новый продукт");
             System.out.println("2. Удалить сущ продукт");
             System.out.println("3. Вытщаить каталог");
+            System.out.println("5. Удалить название продукта");
             System.out.println("7. Найти макс значение");
             int operation = scanner.nextInt();
 
@@ -33,7 +34,6 @@ public class Main {
                 String name = scanner1.nextLine();
                 System.out.println("Введите цену: ");
                 double price = scanner1.nextDouble();
-                price += price;
                 System.out.println("Придумайте артикул: ");
                 Scanner scanner13 = new Scanner(System.in);
                 String article = scanner13.nextLine();
@@ -67,6 +67,15 @@ public class Main {
 
             if (operation == 3){
                 catalog.getProducts().forEach(System.out::println);
+            }
+            if (operation == 5) {
+                Scanner scanner5 = new Scanner(System.in);
+                System.out.println("Введите название уничтожаемого товара: ");
+                String name = scanner5.nextLine();
+                List<Product> allProducts = catalog.getProducts();
+                allProducts.removeIf(k -> k.getName().equals(name));
+                catalog.setProducts(allProducts);
+                System.out.println("-----Вы удалили товар-----");
             }
         }
 

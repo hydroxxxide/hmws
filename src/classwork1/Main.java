@@ -38,6 +38,7 @@ public class Main {
                 String name = scanner1.nextLine();
                 System.out.println("Введите цену: ");
                 double price = scanner1.nextDouble();
+                price += price;
                 System.out.println("Придумайте артикул: ");
                 Scanner scanner13 = new Scanner(System.in);
                 String article = scanner13.nextLine();

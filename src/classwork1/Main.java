@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,6 +25,7 @@ public class Main {
             System.out.println("1. Создать новый продукт");
             System.out.println("2. Удалить сущ продукт");
             System.out.println("3. Вытщаить каталог");
+            System.out.println("4. Вернуться в реальность");
             System.out.println("5. Удалить название продукта");
             System.out.println("6. Сортировка по ценам");
             System.out.println("7. Найти макс значение");
@@ -68,6 +70,18 @@ public class Main {
 
             if (operation == 3){
                 catalog.getProducts().forEach(System.out::println);
+            }
+            if (operation == 4){
+                Scanner scanner2 = new Scanner(System.in);
+
+                System.out.println("Введите ваш бюджет: ");
+                int yourMoney = scanner2.nextInt();
+                System.out.println("ХА-ХА пососи на что тебе не хватает");
+                List<Product> allProducts = catalog.getProducts();
+                allProducts.stream()
+                        .filter(x -> x.getPrice() > yourMoney)
+                        .forEach(System.out::println );
+
             }
             if (operation == 5) {
                 Scanner scanner5 = new Scanner(System.in);

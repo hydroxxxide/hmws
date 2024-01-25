@@ -113,7 +113,7 @@ public class Main {
         Product product4 = new Product("Горелый еврей", 0.69, "GI-41");
         Product product5 = new Product("плов узбекский", 1500.69, "UZ-998");
         Product product6 = new Product("Гель-скраб лля мозга (маленбкий пенис)", 13.5, "ISH-13");
-
+        System.out.println("ПИЗДУЙТЕ ОТСЮДА!!!");
         List<Product> products = new ArrayList<>(List.of(product1, product2, product3, product4, product5, product6));
         return products;
     }
